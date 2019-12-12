@@ -17,7 +17,7 @@ namespace BID.SWE.EXAM.Impl
 
         public bool Method3(int o1)
         {
-            return new ThirdCell().IsAlive();
+            return new ThirdCell().IsAlive(o1);
         }
     }
 }
