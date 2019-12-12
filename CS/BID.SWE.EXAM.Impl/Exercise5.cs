@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net.Sockets;
 using System.Text;
 using BID.SWE1.Exam.Interfaces;
@@ -13,27 +14,21 @@ namespace BID.SWE.EXAM.Impl
         {
             List<string> list = new List<string>();
 
-            int byteCount = 0;
-            byte[] bytes = new byte[256];
+            var client = new TcpClient();
+            client.Connect(str, i);
 
-            Socket clientSocket = new Socket(AddressFamily.InterNetwork,
-        SocketType.Stream,
-        ProtocolType.Tcp);
+            var stream = client.GetStream();
 
-            clientSocket.Connect(str, i);
-
-            byteCount = clientSocket.Receive(bytes, 0, clientSocket.Available,
-                                   SocketFlags.None);
-
-            if (byteCount > 0)
+            using (StreamReader streamReader = new StreamReader(stream))
             {
-                string[] receivedLines = Encoding.UTF8.GetString(bytes, 0, bytes.Length).Split("\n");
-
-                foreach (string line in receivedLines)
+                while (!streamReader.EndOfStream)
                 {
+                    string line = streamReader.ReadLine();
                     list.Add(line);
                 }
             }
+
+            client.Close();
 
             return list;
         }
