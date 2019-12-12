@@ -14,4 +14,7 @@
   <ItemGroup>
     <Folder Include="Classes\" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Bewegen.cs" />
+  </ItemGroup>
 </Project>

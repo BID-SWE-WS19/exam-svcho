@@ -6,7 +6,7 @@ namespace BID.SWE.EXAM.Impl
     {
         public override int AddNewCells(int count)
         {
-            throw new NotImplementedException();
+            return count;
         }
 
         public override string GetMapName()
@@ -16,7 +16,7 @@ namespace BID.SWE.EXAM.Impl
 
         public override float GetMapSize(float amount)
         {
-            throw new NotImplementedException();
+            return amount * amount;
         }
     }
 }

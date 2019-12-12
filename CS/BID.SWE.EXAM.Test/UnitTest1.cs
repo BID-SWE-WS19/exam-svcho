@@ -46,6 +46,42 @@ namespace BID.SWE.EXAM.Test
         }
 
         [Test]
+        public void Ex3Test1()
+        {
+            Exercise3 ex3 = new Exercise3();
+            MyMap myMap = (MyMap)ex3.Method1();
+
+            Assert.AreEqual(myMap.GetMapName(), "BID-Map");
+        }
+
+        [Test]
+        public void Ex3Test2()
+        {
+            Exercise3 ex3 = new Exercise3();
+            MyMap myMap = (MyMap)ex3.Method1();
+
+            Assert.AreEqual(myMap.GetMapSize(1), 1);
+        }
+
+        [Test]
+        public void Ex3Test3()
+        {
+            Exercise3 ex3 = new Exercise3();
+            MyMap myMap = (MyMap)ex3.Method1();
+
+            Assert.AreEqual(myMap.AddNewCells(2), 2);
+        }
+
+        [Test]
+        public void Ex3Test4()
+        {
+            Exercise3 ex3 = new Exercise3();
+            Bewegung[] test = (Bewegung[])ex3.Method2();
+
+            Assert.AreEqual(test.Length, 2);
+        }
+
+        [Test]
         public void Ex4Test1()
         {
             Exercise4 ex4 = new Exercise4();
