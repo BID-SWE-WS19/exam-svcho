@@ -7,6 +7,7 @@ using BID.SWE1.Exam.Interfaces;
 
 namespace BID.SWE.EXAM.Impl
 {
+    //Aufgabe: Socket verbindung zu einem vorhandenen Server erstellen und jede zeile an strings empfangen und in eine Liste geben und die Liste returnen
     public class Exercise5 : IExercise5
     {
        

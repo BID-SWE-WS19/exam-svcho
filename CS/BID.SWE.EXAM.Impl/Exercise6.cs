@@ -4,6 +4,7 @@ using BID.SWE1.Exam.Interfaces;
 
 namespace BID.SWE.EXAM.Impl
 {
+    //Aufgabe 6: Ein SQLCommand erstellen welches in eine gegebene Tabelle ein insert macht
     public class Exercise6 : IExercise6
     {
         public object Method1()

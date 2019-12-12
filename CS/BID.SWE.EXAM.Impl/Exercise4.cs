@@ -4,6 +4,7 @@ using BID.SWE1.Exam.Interfaces;
 
 namespace BID.SWE.EXAM.Impl
 {
+    //Aufgabe: Einen Stream erstellen und darin 3 Zeilen schreiben und dann den Stream aufmachen und den 3. Wert auslesen
     public class Exercise4 : IExercise4
     {
         public object Method1()
