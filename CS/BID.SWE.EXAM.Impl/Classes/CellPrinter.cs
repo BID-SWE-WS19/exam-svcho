@@ -5,10 +5,6 @@ namespace BID.SWE.EXAM.Impl
 {
     public class CellPrinter : ICellPrinter
     {
-        public CellPrinter()
-        {
-        }
-
         public string PrintPostion(int x, int y)
         {
             return $"Cell is on Position X:{x} Y:{y}";
